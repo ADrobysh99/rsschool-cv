@@ -19,3 +19,20 @@ a.button:hover{
 	text-decoration: none;
 	font-size: 1.3em;
 }
+ul.nav{                       
+	list-style-type: none;   
+	margin-left: 0px;
+	padding-left: 0px;
+}
+ul.nav li{
+	display: inline; 
+}
+ul.nav a{
+	display: inline-block; 
+	border:1px dashed #000;
+	padding: 5px 30px;
+	background: #1a1a1a;
+	text-decoration: none;
+	color: #f33;
+	border-radius: 4px;
+}
