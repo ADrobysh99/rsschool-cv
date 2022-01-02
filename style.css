@@ -72,3 +72,238 @@ body{
 	color: #fff;
 	font-weight: normal;
 }
+header{
+	padding: 0.5em 1em;
+	background: #000;
+	display: flex;
+}
+.title {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+}
+/********Стиль для заголовка h1******/
+.title > h1 {
+	color:#00FF00;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin: .25em 0;
+}
+/********Стиль для заголовка h2******/
+.title > h2 {
+	color:#fff;
+	text-transform: uppercase;
+	font-size: 1em;
+	margin: .25em 0;
+}
+/********Стиль для фото******/
+.profile-photo{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+/*******************************************
+************** MAIN  *********************
+*******************************************/
+main{
+	display: flex;
+	flex-direction: row;
+	background-color: #2C2524;
+}
+.main{
+	width: 70%;
+	padding: 10px;
+	border-left: 1px #1476bb solid;
+}
+*{
+	color:aquamarine;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif, "Roboto";
+}
+section {
+    margin-bottom: 30px;
+}
+/*****************<section about-me>*********/
+.above{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 3px;
+    padding: 10px 0 10px;
+	box-sizing: border-box;
+}
+.above> h2 {
+    font-size: 30px;
+	margin: 2px;
+    font-weight: 500;
+	color:#00FF00;
+}
+.above-me{
+	display: flex;
+	margin: 13px 0;
+	font-size: 20px;
+}
+.above-me>p{
+	margin: 2px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+/*****************<section skills>*********/
+.skills{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px 0 10px;
+}
+.skills>h2{
+	font-size: 30px;
+	margin: 2px;
+    font-weight: 500;
+	color:#00FF00;
+}
+.list{
+	display:block;
+	box-sizing: border-box;
+	padding: 0;
+    font-family: sans-serif,"Roboto";
+}
+.list>li{
+	margin: 3px 0;
+    list-style: none;
+	font-size: 20px;
+
+}
+
+/*****************<section education>*********/
+.education{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px 0 10px;
+}
+.education>h2{
+	font-size: 30px;
+	margin: 2px;
+    font-weight: 500;
+	color:#00FF00;
+}
+.list>li{
+	margin: 3px 0;
+    list-style: none;
+	font-size: 20px;
+}
+.list>li>a:hover{
+	color:#00FF00;
+}
+
+
+/*****************<section code>*********/
+
+#code {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.code{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px 0 10px;
+	color:#00FF00;
+}
+.code>h2{
+	font-size: 24px;
+	margin: 2px;
+    font-weight: 500;
+}
+pre{
+	display: block;
+}
+.code-exm{
+    color:#000;
+	display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: linear-gradient(to top left, powderblue, pink);
+	border-radius: 20px;
+}
+/*******************************************
+************** ASIDE  *********************
+*******************************************/
+aside{
+	width: 30%;
+	background-color:#2C2524;
+	padding: 20px;
+}
+/*****************<section contacts>*********/
+.sect-cont{
+	display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0px;
+    padding: 10px 0;
+}
+.sect-cont>h2{
+	font-size: 22px;
+    font-weight: 400;
+    margin: 3px 0;
+	color:#00FF00;
+}
+.contacts>li{
+	list-style-image: initial;
+	margin: 12px 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+/*****************<section languages>*********/
+
+.languages{
+	display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0px;
+    padding: 10px 0;
+}
+.languages>h2{
+	font-size: 22px;
+    font-weight: 400;
+    margin: 3px 0;
+	color:#00FF00;
+}
+.langs>li{
+	list-style-image: initial;
+	margin: 12px 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+/*****************<section courses>*********/
+.cours{
+	display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0px;
+    padding: 10px 0;
+}
+.cours>h2{
+	font-size: 22px;
+    font-weight: 400;
+    margin: 3px 0;
+	color:#00FF00;
+}
+.courses>li{
+	list-style-image: initial;
+	margin: 12px 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+.courses>li>a{
+	font-weight: bold;
+    text-decoration: none;
+}
+.courses>li>a:hover{
+	color:#00FF00
+}
