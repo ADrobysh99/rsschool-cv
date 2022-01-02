@@ -1,38 +1,526 @@
+:root{
+	box-sizing: border-box;
+	font-size: calc(1vw + 0.8em);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: sans-serif, "Roboto";
+}
+html {
+	scroll-behavior: smooth; 
+  }
+
+li{
+	list-style: none;
+	line-height: 50px;
+	padding-left: 20px;
+ } 
+
 body{
-	padding: 60px;
+	font-family: Helvetica, Arial, sans-serif;
+	display: flex;
+	justify-content: space-between;
 }
-a.button{
-	border: solid 1px rgb(0, 9 ,0);
-	background-color: rgb(50, 50, 50);
+/*******wrapper *******/
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1250px;
+    min-height: 100vh;
+    margin:  0 auto;
+}
+.menu{
+	position: relative;
+}
+/******button class="menu-toggle"******/
+.menu-toggle{
+	position: absolute;     
+	top: -1.2em;
+	right: 0em;
+	border:0;
+	background-color: transparent;
+	font-size: 3.1em;
+	width: 1em;
+	height: 1em;
+	line-height: 0.4em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 5em;
+}
+.menu.is-open .menu-dropdown{
+	display: block;
+}
+/********<ul class="nav-menu">********/
+.nav-menu{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #000;
+	color: #fff;
+	display: flex;
+}
+/***border-top  начиная со второго**/
+.nav-menu > li + li{
+	border-top: 1px solid #ccc;
+}
+.nav-menu > li > a{
+	display: block;
+	padding: 0.7em 1em;
+	color: #fff;
+	font-weight: normal;
+}
+header{
+	padding: 0.5em 1em;
+	background: #000;
+	display: flex;
+}
+.title {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+}
+/********Стиль для заголовка h1******/
+.title > h1 {
+	color:#00FF00;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin: .25em 0;
+}
+/********Стиль для заголовка h2******/
+.title > h2 {
 	color:#fff;
-	padding: 4px;
-	border-radius: 3px;
-	text-decoration: none;    
-	font-size: 1.3em;
+	text-transform: uppercase;
+	font-size: 1em;
+	margin: .25em 0;
 }
-a.button:hover{                    
-	border: solid 1px rgb(123, 9 ,123);
-	background-color: rgb(222, 222, 222);
+/********Стиль для фото******/
+.profile-photo{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+/*******************************************
+************** MAIN  *********************
+*******************************************/
+main{
+	display: flex;
+	flex-direction: row;
+	background-color: #2C2524;
+}
+.main{
+	width: 70%;
+	padding: 10px;
+	border-left: 1px #1476bb solid;
+}
+*{
+	color:aquamarine;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif, "Roboto";
+}
+section {
+    margin-bottom: 30px;
+}
+/*****************<section about-me>*********/
+.above{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 3px;
+    padding: 10px 0 10px;
+	box-sizing: border-box;
+}
+.above> h2 {
+    font-size: 30px;
+	margin: 2px;
+    font-weight: 500;
+	color:#00FF00;
+}
+.above-me{
+	display: flex;
+	margin: 13px 0;
+	font-size: 20px;
+}
+.above-me>p{
+	margin: 2px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+/*****************<section skills>*********/
+.skills{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px 0 10px;
+}
+.skills>h2{
+	font-size: 30px;
+	margin: 2px;
+    font-weight: 500;
+	color:#00FF00;
+}
+.list{
+	display:block;
+	box-sizing: border-box;
+	padding: 0;
+    font-family: sans-serif,"Roboto";
+}
+.list>li{
+	margin: 3px 0;
+    list-style: none;
+	font-size: 20px;
+
+}
+
+/*****************<section education>*********/
+.education{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px 0 10px;
+}
+.education>h2{
+	font-size: 30px;
+	margin: 2px;
+    font-weight: 500;
+	color:#00FF00;
+}
+.list>li{
+	margin: 3px 0;
+    list-style: none;
+	font-size: 20px;
+}
+.list>li>a:hover{
+	color:#00FF00;
+}
+
+
+/*****************<section code>*********/
+
+#code {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.code{
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px 0 10px;
+	color:#00FF00;
+}
+.code>h2{
+	font-size: 24px;
+	margin: 2px;
+    font-weight: 500;
+}
+pre{
+	display: block;
+}
+.code-exm{
+    color:#000;
+	display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: linear-gradient(to top left, powderblue, pink);
+	border-radius: 20px;
+}
+/*******************************************
+************** ASIDE  *********************
+*******************************************/
+aside{
+	width: 30%;
+	background-color:#2C2524;
+	padding: 20px;
+}
+/*****************<section contacts>*********/
+.sect-cont{
+	display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0px;
+    padding: 10px 0;
+}
+.sect-cont>h2{
+	font-size: 22px;
+    font-weight: 400;
+    margin: 3px 0;
+	color:#00FF00;
+}
+.contacts>li{
+	list-style-image: initial;
+	margin: 12px 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+/*****************<section languages>*********/
+
+.languages{
+	display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0px;
+    padding: 10px 0;
+}
+.languages>h2{
+	font-size: 22px;
+    font-weight: 400;
+    margin: 3px 0;
+	color:#00FF00;
+}
+.langs>li{
+	list-style-image: initial;
+	margin: 12px 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+/*****************<section courses>*********/
+.cours{
+	display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0px;
+    padding: 10px 0;
+}
+.cours>h2{
+	font-size: 22px;
+    font-weight: 400;
+    margin: 3px 0;
+	color:#00FF00;
+}
+.courses>li{
+	list-style-image: initial;
+	margin: 12px 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+.courses>li>a{
+	font-weight: bold;
+    text-decoration: none;
+}
+.courses>li>a:hover{
+	color:#00FF00
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+	background-color: #ccc
+}
+.year{
+	width: 100px;
+    text-align: center;
+    font-size: 37px;
+    line-height: 37px;
+    font-weight: bold;
 	color:#000;
-	padding: 4px;
-	border-radius: 3px;
+}
+.github>a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+	color: #000;
+}
+.footer-rss>a>img{
+	width: 100px;
+    position: relative;
+    top: 15px;
+}
+/*******************************************
+********** ССЫЛКИ *************************
+*******************************************/
+a:link{
+	font-weight: bold;
 	text-decoration: none;
-	font-size: 1.3em;
 }
-ul.nav{                       
-	list-style-type: none;   
-	margin-left: 0px;
-	padding-left: 0px;
+a:active{
+	color: #b45514;
 }
-ul.nav li{
-	display: inline; 
+
+@media (max-width: 575px){                                         
+	section {
+		margin-bottom: 7px;
+	}
+	header {
+		flex-direction: column;
+		align-items: center;
+		box-sizing: border-box;
+		padding: 0px;
+	}
+	.profile-photo {
+		min-width: 320px;
+		width: 50%;
+	}
+	.main, aside {
+		width: 100%;
+	}
+	aside{
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px;
+		background-color: #2C2524;
+		box-sizing: border-box;
+	}
+    main{
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px;
+		background-color: #2C2524;
+		box-sizing: border-box;
+	}
+	.languages, .sect-cont, .cours, .main {
+		margin: 0px;
+		padding: 0px;
+	}
+	.above-me{
+		padding: 5px;
+		font-size: 16px;
+	}
+	.above> h1, .skills>h1, .education>h1, .code {
+		font-size: 22px;
+	}
+	.above> h1{
+		padding-left: 15px;
+	}
+	.list>li{
+		padding-left: 25px;
+		margin: 12px 0;
+		list-style: none;
+		font-size: 16px;
+		line-height: 24px;
+		padding-left: 25px;
+	}
+	.main{
+		border-left: none;
+	}
+	.nav-menu > li > a {
+		padding: 0.1em 1em;
+	}
+	footer {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px;
+		background-color: #ccc;
+	}
+	.year {
+		font-size: 25px;
+	}
+	.footer-rss>a>img {
+		width: 80px;
+		position: relative;
+		top: 5px;
+	}
+    .wrapper{
+		max-width: none;
+	}
+	/*************************************buttom******************************************/
+	.menu-toggle{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 18px;
+		height: 18px;
+		background-image: url(img/burger-open.svg);
+		cursor: pointer;
+		transition: var(--main-trans);
+		z-index: 3;
+		user-select: none;
+		background-image: url(https://mrks77.github.io/rsschool-cv/img/burger-open.svg);
+	}
+	.menu-dropdown{
+		display: none;
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin: 0;
+	}
 }
-ul.nav a{
-	display: inline-block; 
-	border:1px dashed #000;
-	padding: 5px 30px;
-	background: #1a1a1a;
-	text-decoration: none;
-	color: #f33;
-	border-radius: 4px;
+@media (min-width: 576px) and (max-width: 767px) { 
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+	 main{
+		display: flex;
+		flex-direction: row;
+	}
+	.main{
+		flex: 3;
+	}
+	aside{
+		flex: 1;
+	}
+	.title > h1{
+		font-size: 2.6rem;
+	}
+	.nav-menu > li{
+		flex: 1;
+		font-size: 24px;
+	}
+	.nav-menu > li + li{
+		border: 0;
+	}
+	.nav-menu > li > a{
+		padding: 0.3em;
+		text-align: center;
+	}
+	/****Меню выстраивается в линию****/
+	.menu-dropdown{
+		display: block;
+		position: static;
+	}
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+		justify-content: space-between;
+	}
+ }
+
+ @media (min-width: 768px) and (max-width: 991px) { 
+	body{
+		display: flex;
+	}
+	 main{
+		display: flex;
+		flex-direction: row;
+	}
+	.main{
+		flex: 3;
+	}
+	aside{
+		flex: 1;
+	} 
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+		justify-content: space-between;
+	}
+	.contacts>li{
+		margin: 0 px;
+		padding: 0px;
+		font-size: 14px;
+	}
 }
+@media (min-width: 992px) { 
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+		justify-content: space-between;
+	}
+ }
