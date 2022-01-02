@@ -23,7 +23,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 }
-/******* оболочка wrapper *******/
+/*******wrapper *******/
 .wrapper {
     position: relative;
     display: flex;
@@ -31,4 +31,44 @@ body{
     width: 1250px;
     min-height: 100vh;
     margin:  0 auto;
+}
+.menu{
+	position: relative;
+}
+/******button class="menu-toggle"******/
+.menu-toggle{
+	position: absolute;     
+	top: -1.2em;
+	right: 0em;
+	border:0;
+	background-color: transparent;
+	font-size: 3.1em;
+	width: 1em;
+	height: 1em;
+	line-height: 0.4em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 5em;
+}
+.menu.is-open .menu-dropdown{
+	display: block;
+}
+/********<ul class="nav-menu">********/
+.nav-menu{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #000;
+	color: #fff;
+	display: flex;
+}
+/***border-top  начиная со второго**/
+.nav-menu > li + li{
+	border-top: 1px solid #ccc;
+}
+.nav-menu > li > a{
+	display: block;
+	padding: 0.7em 1em;
+	color: #fff;
+	font-weight: normal;
 }
