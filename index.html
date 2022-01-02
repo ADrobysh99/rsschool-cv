@@ -77,7 +77,6 @@
 					My goal is to learn everything new and exciting</p>
 				</div>	
 			</section>	
-
 			<section id="skills">
 				<div class="skills"><h2>Skills</h2></div>
 				<ul class="list">
@@ -109,3 +108,26 @@
 			</section>
 		</div>
 	</main>
+	<footer>
+		<div class="year">2021</div>
+		<div class="github">
+			<a target="_blank" href="https://github.com/ADrobysh99">
+				<i class="fab fa-github" aria-hidden="true"></i>Me on GitHub</a>
+		</div>
+		<div class="footer-rss">
+			<a target="_blank" href="https://rs.school/js/"><img src="rs_school_js.svg" alt="RSSchool link" /></a>
+		</div>
+	</footer>
+</div>
+
+<script>
+	(function() {
+		var button = document.getElementById('toggle-menu');
+		button.addEventListener('click', function(event) { 
+			event.preventDefault();
+			var menu = document.getElementById('main-menu');
+			menu.classList.toggle('is-open');
+		});
+	})();
+</script>
+</body>
