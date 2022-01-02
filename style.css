@@ -307,3 +307,220 @@ aside{
 .courses>li>a:hover{
 	color:#00FF00
 }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+	background-color: #ccc
+}
+.year{
+	width: 100px;
+    text-align: center;
+    font-size: 37px;
+    line-height: 37px;
+    font-weight: bold;
+	color:#000;
+}
+.github>a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+	color: #000;
+}
+.footer-rss>a>img{
+	width: 100px;
+    position: relative;
+    top: 15px;
+}
+/*******************************************
+********** ССЫЛКИ *************************
+*******************************************/
+a:link{
+	font-weight: bold;
+	text-decoration: none;
+}
+a:active{
+	color: #b45514;
+}
+
+@media (max-width: 575px){                                         
+	section {
+		margin-bottom: 7px;
+	}
+	header {
+		flex-direction: column;
+		align-items: center;
+		box-sizing: border-box;
+		padding: 0px;
+	}
+	.profile-photo {
+		min-width: 320px;
+		width: 50%;
+	}
+	.main, aside {
+		width: 100%;
+	}
+	aside{
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px;
+		background-color: #2C2524;
+		box-sizing: border-box;
+	}
+    main{
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px;
+		background-color: #2C2524;
+		box-sizing: border-box;
+	}
+	.languages, .sect-cont, .cours, .main {
+		margin: 0px;
+		padding: 0px;
+	}
+	.above-me{
+		padding: 5px;
+		font-size: 16px;
+	}
+	.above> h1, .skills>h1, .education>h1, .code {
+		font-size: 22px;
+	}
+	.above> h1{
+		padding-left: 15px;
+	}
+	.list>li{
+		padding-left: 25px;
+		margin: 12px 0;
+		list-style: none;
+		font-size: 16px;
+		line-height: 24px;
+		padding-left: 25px;
+	}
+	.main{
+		border-left: none;
+	}
+	.nav-menu > li > a {
+		padding: 0.1em 1em;
+	}
+	footer {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px;
+		background-color: #ccc;
+	}
+	.year {
+		font-size: 25px;
+	}
+	.footer-rss>a>img {
+		width: 80px;
+		position: relative;
+		top: 5px;
+	}
+    .wrapper{
+		max-width: none;
+	}
+	/*************************************buttom******************************************/
+	.menu-toggle{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 18px;
+		height: 18px;
+		background-image: url(img/burger-open.svg);
+		cursor: pointer;
+		transition: var(--main-trans);
+		z-index: 3;
+		user-select: none;
+		background-image: url(https://mrks77.github.io/rsschool-cv/img/burger-open.svg);
+	}
+	.menu-dropdown{
+		display: none;
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin: 0;
+	}
+}
+@media (min-width: 576px) and (max-width: 767px) { 
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+	 main{
+		display: flex;
+		flex-direction: row;
+	}
+	.main{
+		flex: 3;
+	}
+	aside{
+		flex: 1;
+	}
+	.title > h1{
+		font-size: 2.6rem;
+	}
+	.nav-menu > li{
+		flex: 1;
+		font-size: 24px;
+	}
+	.nav-menu > li + li{
+		border: 0;
+	}
+	.nav-menu > li > a{
+		padding: 0.3em;
+		text-align: center;
+	}
+	/****Меню выстраивается в линию****/
+	.menu-dropdown{
+		display: block;
+		position: static;
+	}
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+		justify-content: space-between;
+	}
+ }
+
+ @media (min-width: 768px) and (max-width: 991px) { 
+	body{
+		display: flex;
+	}
+	 main{
+		display: flex;
+		flex-direction: row;
+	}
+	.main{
+		flex: 3;
+	}
+	aside{
+		flex: 1;
+	} 
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+		justify-content: space-between;
+	}
+	.contacts>li{
+		margin: 0 px;
+		padding: 0px;
+		font-size: 14px;
+	}
+}
+@media (min-width: 992px) { 
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+		justify-content: space-between;
+	}
+ }
